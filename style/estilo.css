@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "Android";
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+:root {
+    --cor0: #f5f5f5;
+    --cor1: #bfbfbf;
+    --cor2: #7e84f2;
+    --cor3: #274873;
+    --cor4: #394759;
+    --cor5: #5f9ea0;
+
+
+    --fonte-padrão: arial, verdana, helvetica, sans-serif;
+    --fonte-destaques:'Bebas Neue', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+   background-color: var(--cor1);
+   font-family: var(--fonte-padrão);
+   margin: auto;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor4));
+   
+    min-height: 150px;
+    text-align: center;
+
+}
+
+.logotopo {
+    width: 80px;
+    height: 75px;
+}
+
+header > h1 {
+    letter-spacing: 0.5em;
+    margin-bottom: 1px;
+    text-shadow: 3px 3px rgba(255, 235, 205, 0.103);
+}
+
+header > h3 {
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-shadow: 3px 3px rgba(255, 235, 205, 0.096);
+}
+
+nav {
+    background-color: var(--cor4);
+    text-align: center;
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor0);
+    padding: 5px;
+    border-radius:10%;
+}
+
+nav a:hover {
+    background-color: var(--cor2);
+    color: var(--cor4);
+    font-weight: bolder;
+
+}
+
+main {
+    /*background-image: linear-gradient(to bottom, var(--cor0), var(--cor3));*/
+    background-color: var(--cor0);
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    margin-bottom: 10px;
+    
+    /*arredondar somente os cantos inferiores*/
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+main h2 {
+    font-family: var(--fonte-padrão);
+    color:var(--cor5);
+    text-align: center;
+    padding: 30px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.123);
+    font-size: 2em;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 1.5em;
+    padding: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+button {
+    padding: 15px;
+    background: var(--cor3);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.089);
+    border: 1px;
+    font-size: 1.1em;
+   
+}
+
+button:hover {
+    background-color: var(--cor2);
+}
+
+button > a {
+    text-decoration: none;
+    color: var(--cor0);
+    letter-spacing: .1em;
+}
+
+#carrossel {
+
+    width: 100vw;
+    display: flex;
+    ;
+}
+
+#slides {
+    width: 755px;
+    height: 500px;
+    display: flex;
+    overflow-x:auto;
+    scroll-snap-type: x mandatory;
+   /* border-radius: 10%;*/
+   border-top-left-radius: 10%;
+   border-bottom-right-radius: 15%;
+}
+
+.slide {
+    flex: none;
+    width: 50%;
+    height: 400px;
+
+    scroll-snap-align: start;
+}
+
+#slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.sobre {
+    /*background-image: linear-gradient(to bottom, var(--cor0), var(--cor5));*/
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.041);
+    text-align: center;
+    font-family: var(--fonte-destaques);
+}
+
+.sobre p{
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+strong {
+    /*color: var(--cor3);
+*/
+}
+
+.sobre ul {
+    list-style: none;
+    text-align: left;
+    text-indent: 20em;
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+}
+
+.sobre ul li {
+    margin-bottom: 10px;
+}
+
+.efeito-vidro {
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+
+
+div.imgmapa { 
+    padding: 20px;
+    margin: 0px -20px;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+
+footer{
+    background-color: var(--cor4);
+    color: azure;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
